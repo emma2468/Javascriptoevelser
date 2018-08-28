@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+    <button id="removeTypo">Remove Typo</button>
+
     <h3>En</h3>
     <p>Gochujang blue bottle iPhone quinoa, umami lumbersexual semiotics disrupt coloring book squid. Tilde banjo flannel PBR&B umami vape plaid occupy prism lumbersexual man braid. </p>
     <h3>Lille</h3>
@@ -29,7 +32,29 @@
 
 
     <script>
+        //Teksten (p) forandre sig, når den klikkes på:
         const p = document.querySelectorAll("p");
+
+        console.log(p);
+
+        p.forEach(pg => {
+            pg.addEventListener("click", function() {
+                pg.classList.add("typo");
+            });
+        });
+        
+        //Ved at klikke på "Remove Typo" knappen, fjernes den blå skriftype fra alle paragrafer (p):
+        const removeTypo = document.querySelector("#removeTypo");
+        
+        removeTypo.addEventListener("click", function(){
+            
+            console.log("removeTypo");
+            
+            p.forEach(pg => {
+                pg.classList.remove("typo");
+            });
+        });
+        
         
     </script>
 </body>
