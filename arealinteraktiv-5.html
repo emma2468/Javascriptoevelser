@@ -13,7 +13,16 @@
         let width = promt("Bredden?");
         let besked;
 
-        if(Number)
+        if(Number(width) && Number(lenght)){
+            alert("Længde: " +
+                    length + " meter\nBredden: " +
+                    width + " \meter \nArealet: " +
+                    length*width + " kvadratmeter");
+        }else{
+            alert("Kan ikke regne det ud");
+        }if(confirm("Vil du starte forfra?")){
+            location.reload();
+        }
 
     </script>
 </body>
