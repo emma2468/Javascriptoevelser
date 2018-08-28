@@ -27,7 +27,22 @@
 
     <script>
         
+        const display = document.querySelector("#display");
+        
         let musikListe = ["Helle", "Martin", "Kamilla", "Louise", "Birgitte"];
+        
+        display.addEventListener("click", tilføjMusikListe)
+        
+        function tilføjMusikListe(){
+        
+        musikListe.forEach(nummer =>{
+            
+            console.log(nummer);
+            
+            display.innerHTML += nummer + " :)" + "<br>";
+        });
+        
+        }
     </script>
 </body>
 
